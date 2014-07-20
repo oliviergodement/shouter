@@ -3,7 +3,9 @@ Rails.application.routes.draw do
   resource :session, only: [:new, :create, :destroy]
   resource :dashboard, only: [:show]
   resources :users, only: [:new, :create, :show]
-  resources :shouts, only: [:create, :show]
+  resources :shouts, only: [:show]
+  resources :text_shouts, only: [:create]
+  resources :photo_shouts, only: [:create]
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
